@@ -1,17 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "browser-use"
+name = "browser-use-enhanced"
+version = "0.1.16"
 description = "Make websites accessible for AI agents"
-authors = [
-    { name = "Gregor Zunic" }
-]
-version = "0.1.15"
 readme = "README.md"
-requires-python = ">=3.11"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "MainContentExtractor>=0.0.4",
     "beautifulsoup4>=4.12.3",
@@ -20,6 +16,7 @@ dependencies = [
     "langchain-openai>=0.2.10",
     "langchain-anthropic>=0.3.0",
     "langchain-fireworks>=0.2.5",
+    "langchain-google-genai>=0.1.0",
     "pydantic>=2.10.2",
     "python-dotenv>=1.0.1",
     "requests>=2.32.3",
@@ -29,21 +26,24 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "tokencost>=0.1.16",
-    "hatch>=1.13.0",
     "build>=1.2.2",
+    "twine>=4.0.2",
     "pytest>=8.3.3",
     "pytest-asyncio>=0.24.0"
 ]
 
+[tool.hatch.build]
+sources = ["."]
+include = ["browser_use"]
+
 [tool.ruff]
 line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
 
 [tool.ruff.format]
 quote-style = "single"
 indent-style = "tab"
 docstring-code-format = true
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"

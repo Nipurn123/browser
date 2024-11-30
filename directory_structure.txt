@@ -1,0 +1,56 @@
+.
+├── AgentHistoryList.json
+├── LICENSE
+├── README.md
+├── actions.json
+├── browser_use
+│   ├── README.md
+│   ├── __init__.py
+│   ├── agent
+│   ├── browser
+│   ├── controller
+│   ├── dom
+│   ├── logging_config.py
+│   ├── telemetry
+│   └── utils.py
+├── conftest.py
+├── directory_structure.txt
+├── examples
+│   ├── agent_output_processing.py
+│   ├── amazon_search.py
+│   ├── captcha.py
+│   ├── chain_of_agents.py
+│   ├── check_appointment.py
+│   ├── custom_output.py
+│   ├── custom_system_prompt.py
+│   ├── file_upload.py
+│   ├── find_and_apply_to_jobs.py
+│   ├── flight_search.py
+│   ├── hugging_face.py
+│   ├── multi-tab_handling.py
+│   ├── scrolling_page.py
+│   ├── test_cv.txt
+│   ├── try.py
+│   ├── validate_output.py
+│   └── who_starred_my_repo.py
+├── main.py
+├── myvenv
+│   ├── bin
+│   ├── include
+│   └── pyvenv.cfg
+├── pyproject.toml
+├── pytest.ini
+├── requirements.txt
+├── static
+│   ├── browser-use.png
+│   ├── kayak.gif
+│   └── photos.gif
+└── tests
+    ├── mind2web_data
+    ├── test_agent_actions.py
+    ├── test_core_functionality.py
+    ├── test_mind2web.py
+    ├── test_self_registered_actions.py
+    └── test_stress.py
+
+14 directories, 40 files
